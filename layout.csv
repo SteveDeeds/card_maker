@@ -1,9 +1,12 @@
 font,font_size,text_color,justification,vertical_pos,element_name,rotation
-LCALLIG,40,#555555,Center,0.13,pretitle,0
-lucon,60,#000000,Center,0.2,title,0
-LCALLIG,40,#555555,Center,0.27,posttitle,0
-lucon,60,#000000,Left,0.02,number,0
-lucon,60,#000000,Left,0.08,suit,0
-lucon,60,#000000,Right,0.98,number,180
-lucon,60,#000000,Right,0.92,suit,180
+LCALLIG,40,#433650,Center,0.13,pretitle,0
+lucon,60,#322f48,Center,0.2,title,0
+LCALLIG,40,#433650,Center,0.27,posttitle,0
+lucon,60,#273245,Left,0.4,instrument,0
+lucon,60,#273245,Right,0.5,chord,0
+lucon,60,#566246,Left,0.6,tip,0
+lucon,60,#273245,Left,0.02,number,0
+lucon,60,#273245,Left,0.08,suit,0
+lucon,60,#273245,Right,0.98,number,180
+lucon,60,#273245,Right,0.92,suit,180
 
