@@ -1,0 +1,53 @@
+number,suit,pretitle,title,posttitle,tip,instrument,
+A,♠,You only make,Pretty Rainbows,for me,,Piano,I
+2,♠,You are the, Gentle Breeze,through my trees,,Violin,ii
+3,♠,No one is more,Full of Wonders,than you,,Guitar,iii
+4,♠,Your love is as,Sweet as Candy, to me,,Flute,IV
+5,♠,,,,,Trumpet,V
+6,♠,,,,,Saxophone,vi
+7,♠,,,,,Drums,vii�
+8,♠,,,,,Cello,Imaj7
+9,♠,,,,,Clarinet,iimaj7
+10,♠,,,,,Bass Guitar,iii7
+J,♠,,,,,Oboe,IV7
+Q,♠,,,,,Trombone,V7
+K,♠,,,,,Harp,vi7
+A,♣,,,,,Synthesizer,I6
+2,♣,,,,,Ukulele,ii6
+3,♣,,,,,Tuba,iii6
+4,♣,,,,,Banjo,IV6
+5,♣,,,,,Accordion,V6
+6,♣,,,,,Mandolin,vi6
+7,♣,,,,,Piccolo,vii6
+8,♣,,,,,French Horn,I9
+9,♣,,,,,Bassoon,ii9
+10,♣,,,,,Marimba,iii9
+J,♣,,,,,Harmonica,IV9
+Q,♣,,,,,Bagpipes,V9
+K,♣,,,,,Sitar,vi9
+A,♥,,,,,Steel Drums,Imaj7
+2,♥,,,,,Glockenspiel,iimaj7
+3,♥,,,,,Djembe,iiimaj7
+4,♥,,,,,Congas,IVmaj7
+5,♥,,,,,Tabletop Synth,Vmaj7
+6,♥,,,,,Saw Lead,vimaj7
+7,♥,,,,,Grainy Bass,Iadd9
+8,♥,,,,,Pad Synth,iiadd9
+9,♥,,,,,Acid Bass,iiiadd9
+10,♥,,,,,LFO Synth,IVadd9
+J,♥,,,,,Pluck Synth,Vadd9
+Q,♥,,,,,FM Synth,viadd9
+K,♥,,,,,Wavetable Synth,Isus4
+A,♦,,,,,Granular Synth,iisus4
+2,♦,,,,,String Ensemble (Synth),iiisus4
+3,♦,,,,,Brass Synth,IVsus4
+4,♦,,,,,Choir Synth,Vsus4
+5,♦,,,,,Electric Piano (Synth),visus4
+6,♦,,,,,Retro Synth,I5
+7,♦,,,,,Modular Synth,ii5
+8,♦,,,,,White Noise (Synth),iii5
+9,♦,,,,,Sub Bass (Synth),IV5
+10,♦,,,,,Lead Arpeggio (Synth),V5
+J,♦,,,,,Ambient Synth,vi5
+Q,♦,,,,,Techno Synth,Imaj9
+K,♦,,,,,Dubstep Wobble (Synth),I6/9
