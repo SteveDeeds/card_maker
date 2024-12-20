@@ -1,53 +1,53 @@
-number,suit,pretitle,title,posttitle,tip,instrument,
-A,♠,You only make,Pretty Rainbows,for me,,Piano,I
-2,♠,You are the, Gentle Breeze,through my trees,,Violin,ii
-3,♠,No one is more,Full of Wonders,than you,,Guitar,iii
-4,♠,Your love is as,Sweet as Candy, to me,,Flute,IV
-5,♠,,,,,Trumpet,V
-6,♠,,,,,Saxophone,vi
-7,♠,,,,,Drums,vii�
-8,♠,,,,,Cello,Imaj7
-9,♠,,,,,Clarinet,iimaj7
-10,♠,,,,,Bass Guitar,iii7
-J,♠,,,,,Oboe,IV7
-Q,♠,,,,,Trombone,V7
-K,♠,,,,,Harp,vi7
-A,♣,,,,,Synthesizer,I6
-2,♣,,,,,Ukulele,ii6
-3,♣,,,,,Tuba,iii6
-4,♣,,,,,Banjo,IV6
-5,♣,,,,,Accordion,V6
-6,♣,,,,,Mandolin,vi6
-7,♣,,,,,Piccolo,vii6
-8,♣,,,,,French Horn,I9
-9,♣,,,,,Bassoon,ii9
-10,♣,,,,,Marimba,iii9
-J,♣,,,,,Harmonica,IV9
-Q,♣,,,,,Bagpipes,V9
-K,♣,,,,,Sitar,vi9
-A,♥,,,,,Steel Drums,Imaj7
-2,♥,,,,,Glockenspiel,iimaj7
-3,♥,,,,,Djembe,iiimaj7
-4,♥,,,,,Congas,IVmaj7
-5,♥,,,,,Tabletop Synth,Vmaj7
-6,♥,,,,,Saw Lead,vimaj7
-7,♥,,,,,Grainy Bass,Iadd9
-8,♥,,,,,Pad Synth,iiadd9
-9,♥,,,,,Acid Bass,iiiadd9
-10,♥,,,,,LFO Synth,IVadd9
-J,♥,,,,,Pluck Synth,Vadd9
-Q,♥,,,,,FM Synth,viadd9
-K,♥,,,,,Wavetable Synth,Isus4
-A,♦,,,,,Granular Synth,iisus4
-2,♦,,,,,String Ensemble (Synth),iiisus4
-3,♦,,,,,Brass Synth,IVsus4
-4,♦,,,,,Choir Synth,Vsus4
-5,♦,,,,,Electric Piano (Synth),visus4
-6,♦,,,,,Retro Synth,I5
-7,♦,,,,,Modular Synth,ii5
-8,♦,,,,,White Noise (Synth),iii5
-9,♦,,,,,Sub Bass (Synth),IV5
-10,♦,,,,,Lead Arpeggio (Synth),V5
-J,♦,,,,,Ambient Synth,vi5
-Q,♦,,,,,Techno Synth,Imaj9
-K,♦,,,,,Dubstep Wobble (Synth),I6/9
+number,suit,pretitle,title,posttitle,tip,instrument,chord
+A,♠,You only make,Pretty Rainbows,to paint the sky with dreams.,Add a Sound Effect - Integrate a unique sound effect into your current project. Try using sounds from everyday objects or even your environment to add an unexpected twist.,Piano,I
+2,♠,You are the, Gentle Breeze,carrying whispers of peace.,"Chord Variation - Change a chord progression in a section of your song. Experiment with substituting a minor chord for a major one, or vice versa, to see how it alters the mood.",Violin,ii
+3,♠,No one is more,Full of Wonders,as world reveals its magic.,Harmony Time - Add a harmony line to an existing melody. Even a simple third or fifth interval can make your melody stand out more.,Guitar,iii
+4,♠,Your love is as,Sweet as Candy,your smile lights the way.,Dynamic Shift - Experiment with the dynamics (volume) of a section. Try making a quiet part louder or a loud part softer to create contrast.,Flute,IV
+5,♠,You're my,Dancing Moonlight,our hearts beat in harmony.,Tempo Play - Slightly adjust the tempo in a part of your project. Speeding up or slowing down a section can create a different feel and add variety.,Trumpet,V
+6,♠,Only the,Heartbeats and Echoes,of love's eternal rhythm.,Rhythmic Twist - Modify the rhythm of a particular instrument or section. Syncopation or changing the beat pattern can add a fresh twist.,Saxophone,vi
+7,♠,Your soft,Whispers of Tomorrow,bring promises of hope.,Instrument Addition - Add a new instrument layer to your piece. This could be anything from a subtle pad to a prominent lead line.,Drums,vii
+8,♠,The first,Endless Horizons,beckon us to explore.,Melody Alteration - Make a small change to the melody. Even changing a few notes can have a big impact on the overall feel.,Cello,Imaj7
+9,♠,When our,Rainy Day Serenade,sings to the soul in solace.,Lyric Tweak - Edit or add a new line to your lyrics. Focus on making the lyrics more vivid or expressive.,Clarinet,iimaj7
+10,♠,In my dreams,Shadows and Sunshine,play their timeless duet.,"Effects Experiment - Apply a different effect (reverb, delay, etc.) to one of your tracks. Effects can drastically change the character of a sound.",Bass Guitar,iii7
+J,♠,Forever,Winds of Change,carry dreams to new lands.,Silent Pause - Incorporate a brief moment of silence in your song. A well-placed pause can add drama and tension.,Oboe,IV7
+Q,♠,Just like a,Dreamer's Anthem,sings of boundless skies.,"Background Texture - Add some ambient sounds or textures. Think of sounds like rain, wind, or city noise to enhance the atmosphere.",Trombone,V7
+K,♠,Lost in the,Fire in the Night,igniting our deepest passions.,Key Change - Try a key change in one part of your song. This can add a surprising twist and keep listeners engaged.,Harp,vi7
+A,♣,Forever more,Serendipity Smiles,when fate aligns our paths.,Intro Variation - Create a new intro or outro. A different start or finish can give your song a fresh context.,Synthesizer,I6
+2,♣,If you,Whispered Secrets,they linger softly in the air.,Layering Vocals - Add a layer of background vocals. Harmonies or echo effects can add depth to your main vocal line.,Ukulele,ii6
+3,♣,Together we have,Ocean of Memories,waves crash with nostalgia.,Percussion Play - Add or change a percussive element. Consider using unconventional percussion instruments or objects.,Tuba,iii6
+4,♣,Our love is like,Rhythm of the Heart,it guides us to each other.,Loop Magic - Create a loop and integrate it into your project. Loops can serve as great foundational elements or transitional parts.,Banjo,IV6
+5,♣,Beyond the,Starry Eyes,reflect the universe within.,Instrumental Break - Insert an instrumental break or solo. This can provide a great opportunity for creative expression.,Accordion,V6
+6,♣,Under the,Harmonic Dreams,weave a symphony of hope.,Reverse Effect - Reverse a small sound clip and use it creatively. This can produce interesting and unexpected sounds.,Mandolin,vi6
+7,♣,With you,Waves of Hope,wash over weary shores.,"Theme Variation - Introduce a variation of your main theme. Play around with melody, harmony, or rhythm to create a new take on your theme.",Piccolo,vii6
+8,♣,In your,Infinite Journey,it leads to endless possibilities.,Chorus Tweak - Make a small change to the chorus. This can help to make the chorus even more catchy or memorable.,French Horn,I9
+9,♣,Through the,"Silent Night, Bright Stars",hold secrets of eternity.,Build-Up - Add a build-up to a specific section. Gradually increasing intensity can lead to a powerful climax.,Bassoon,ii9
+10,♣,I can't beleive it,Mysteries Unfold,when you are around.,Bridge Creation - Write a short bridge to connect two sections. A bridge can provide a refreshing contrast to the rest of your song.,Marimba,iii9
+J,♣,We could be,Wild and Free,like the wind through the trees.,Reflect and Revise - Take a moment to reflect on your progress and make any final tweaks. This is a great time to refine and polish your work.,Harmonica,IV9
+Q,♣,You and I,Chasing Shadows,under the amber glow.,Pitch Shift - Shift the pitch of a vocal or instrumental track. Experimenting with pitch can create a new perspective on an existing part.,Bagpipes,V9
+K,♣,Feel the beat,Beyond the Horizon,lies the truth we seek.,Double Up - Double a track to create a richer sound. This technique can add fullness and depth.,Sitar,vi9
+A,♥,Never let,Echoes of the Past,whisper lessons softly.,Use a New Plugin - Experiment with a new plugin or VST. Discovering new tools can open up new possibilities in your music.,Steel Drums,Imaj7
+2,♥,Until the,Love's Embrace,warms the coldest nights.,Add a Bass Line - Create a bass line for an existing piece. A good bass line can drive the rhythm and add groove.,Glockenspiel,iimaj7
+3,♥,After the,Grace Under Pressure,shines brighter than diamonds.,Incorporate a Motif - Use a recurring motif throughout your song. This can create cohesion and make your song more memorable.,Djembe,iiimaj7
+4,♥,We're meant for,Wanderlust Whispers,urge my heart to roam.,Play with Panning - Adjust the panning of different tracks to create a wider soundstage. This can enhance the spatial feel of your mix.,Congas,IVmaj7
+5,♥,Holding onto,Moonlit Dreams,dance beneath the silver sky.,Try Different Genres - Incorporate elements from a different genre into your project. Mixing genres can lead to unique and innovative results.,Tabletop Synth,Vmaj7
+6,♥,No matter what,Velvet Sky,caresses the soul gently.,Layer Samples - Use multiple samples together for a unique sound. Layering different sounds can add complexity and richness.,Saw Lead,vimaj7
+7,♥,Even if your,Passion's Flame,burns eternal and bright.,Delay Fun - Experiment with delay effects on a track. Delay can add depth and create interesting rhythmic patterns.,Grainy Bass,Iadd9
+8,♥,We have,Harmony and Bliss,in every note we sing.,EQ Adjustment - Tweak the EQ settings of a specific track. This can help to balance the frequencies and make the mix sound better.,Pad Synth,iiadd9
+9,♥,From the,Soulful Reflections,in the mirror of time.,Compression Tweaks - Apply or adjust compression on a track. Compression can control dynamics and add punch to your sound.,Acid Bass,iiiadd9
+10,♥,Without you,Radiant Light,guides us through the dark.,Modulate a Section - Modulate a section to give it a different feel. Changing the key or mode can add variety and interest.,LFO Synth,IVadd9
+J,♥,Don't think,Serenity's Song,lulls the world to peace.,Record Ambient Sounds - Incorporate some recorded ambient sounds. These sounds can add a unique atmosphere to your music.,Pluck Synth,Vadd9
+Q,♥,In the night,Midnight Magic,unfolds under the stars.,"Distortion Experiment - Add a touch of distortion to a track. Distortion can add warmth, edge, or grit to a sound.",FM Synth,viadd9
+K,♥,On this night,Spirit of the Wind,whispers tales of old.,Stereo Width - Play with the stereo width to enhance the mix. Adjusting stereo width can make the mix sound wider and more immersive.,Wavetable Synth,Isus4
+A,♦,In the light,Journey's End,marks a new beginning.,"Vocal Effects - Add effects like chorus, flanger, or autotune to vocals. These effects can enhance the vocal sound and create interesting textures.",Granular Synth,iisus4
+2,♦,The way,Brave Hearts,march to the beat of courage.,Use a Different Scale - Write a melody using a different musical scale. Exploring different scales can lead to new melodic ideas.,String Ensemble (Synth),iiisus4
+3,♦,When the,Whispering Waves,sing songs of the deep.,Focus on Articulation - Adjust the articulation of a specific instrument. Changes in articulation can add expression and nuance.,Brass Synth,IVsus4
+4,♦,To the end,Eternal Hope,lights the darkest path.,Reverb Settings - Change the reverb settings to alter the space. Different reverb settings can create a sense of different environments.,Choir Synth,Vsus4
+5,♦,As long as,Windswept Melodies,carry the tunes of freedom.,Try a New Instrument - Incorporate an instrument you haven't used before. Trying out new instruments can inspire new musical ideas.,Electric Piano (Synth),visus4
+6,♦,With every,Echoing Silence,speaks louder than words.,Automation - Use automation to create dynamic changes over time. Automation can make your mix more interesting and engaging.,Retro Synth,I5
+7,♦,Our hearts,Dancing with Destiny,in the waltz of time.,Syncopation - Add syncopated rhythms to your project. Syncopation can add excitement and energy to the rhythm.,Modular Synth,ii5
+8,♦,On this journey,Rhythms of the Rain,compose nature's symphony.,Glitch Effects - Add some glitch effects for a modern touch. Glitch effects can create a contemporary and experimental sound.,White Noise (Synth),iii5
+9,♦,Through the storm,Whispered Lullabies,ease the restless heart.,Foley Sounds - Record and use foley sounds in your project. Foley sounds can add a layer of realism and texture.,Sub Bass (Synth),IV5
+10,♦,Beyond the stars,Endless Ocean,mirrors the boundless soul.,Alternate Tunings - Experiment with alternate tunings for guitars or other instruments. Alternate tunings can inspire new chord voicings and melodies.,Lead Arpeggio (Synth),V5
+J,♦,Until forever,Tranquil Nights,embrace the weary traveler.,Layer Different Genres - Blend elements from two different genres. This can create a fusion of styles that is unique and innovative.,Ambient Synth,vi5
+Q,♦,Love and,Wild Hearts,chase dreams with abandon.,Create a Pad - Add a pad sound for atmospheric depth. Pads can fill out the background and create a lush soundscape.,Techno Synth,Imaj9
+K,♦,Whisper and,Embrace the Fire,let it fuel your spirit.,Final Review - Do a final review and polishing of your project. This is the time to make sure everything sounds perfect before considering it complete.,Dubstep Wobble (Synth),I6/9
