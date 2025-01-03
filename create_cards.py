@@ -3,6 +3,7 @@ from typing import List, Dict
 from PIL import Image, ImageDraw, ImageFont, ImageColor
 from textwrap import wrap
 from typing import List, Dict
+import random
 
 class ImageFeature:
     def __init__(self, font: str, font_size: int, text_color: str, 
@@ -110,14 +111,69 @@ def wrap_text(text: str, font: ImageFont.FreeTypeFont, max_width: int, draw: Ima
 
     return wrapped_lines
 
+def generate_gradient(width, height):
+    # Generate three random colors for horizontal and vertical gradients
+    horizontal_colors = [tuple(random.randint(128, 255) for _ in range(3)) for _ in range(3)]
+    vertical_colors = [tuple(random.randint(128, 255) for _ in range(3)) for _ in range(3)]
+
+    # Create a new image
+    img = Image.new("RGB", (width, height))
+    pixels = img.load()
+
+    for x in range(width):
+        for y in range(height):
+            # Horizontal interpolation
+            t_x = x / width
+            if t_x < 1/3:
+                h_c1, h_c2 = horizontal_colors[0], horizontal_colors[1]
+                h_t = t_x * 3
+            elif t_x < 2/3:
+                h_c1, h_c2 = horizontal_colors[1], horizontal_colors[2]
+                h_t = (t_x - 1/3) * 3
+            else:
+                h_c1, h_c2 = horizontal_colors[2], horizontal_colors[0]
+                h_t = (t_x - 2/3) * 3
+
+            h_r = int(h_c1[0] + (h_c2[0] - h_c1[0]) * h_t)
+            h_g = int(h_c1[1] + (h_c2[1] - h_c1[1]) * h_t)
+            h_b = int(h_c1[2] + (h_c2[2] - h_c1[2]) * h_t)
+
+            # Vertical interpolation
+            t_y = y / height
+            if t_y < 1/3:
+                v_c1, v_c2 = vertical_colors[0], vertical_colors[1]
+                v_t = t_y * 3
+            elif t_y < 2/3:
+                v_c1, v_c2 = vertical_colors[1], vertical_colors[2]
+                v_t = (t_y - 1/3) * 3
+            else:
+                v_c1, v_c2 = vertical_colors[2], vertical_colors[0]
+                v_t = (t_y - 2/3) * 3
+
+            v_r = int(v_c1[0] + (v_c2[0] - v_c1[0]) * v_t)
+            v_g = int(v_c1[1] + (v_c2[1] - v_c1[1]) * v_t)
+            v_b = int(v_c1[2] + (v_c2[2] - v_c1[2]) * v_t)
+
+            # Combine horizontal and vertical gradients
+            r = min(255, int((h_r + v_r) / 2))
+            g = min(255, int((h_g + v_g) / 2))
+            b = min(255, int((h_b + v_b) / 2))
+
+            # Set the pixel color
+            pixels[x, y] = (r, g, b)
+
+    return img
+
+
 def create_card_image(card: Dict[str, str], features: List['ImageFeature'], output_path: str):
     # Constants for card size and resolution
-    CARD_WIDTH, CARD_HEIGHT = 750, 1050  # Poker card size at 300 DPI (2.5x3.5 inches)
+    CARD_WIDTH, CARD_HEIGHT = 750+75, 1050+75  # Poker card size at 300 DPI (2.5x3.5 inches +0.25 inch boarder)
     DPI = 300
-    MARGIN = int(0.1 * DPI)  # Left and right margins
+    MARGIN = int(0.25 * DPI)  # Left and right margins
 
-    # Create a blank white image
-    image = Image.new("RGBA", (CARD_WIDTH, CARD_HEIGHT), "white")
+    # Generate gradient background
+    gradient_background = generate_gradient(CARD_WIDTH, CARD_HEIGHT)
+    image = gradient_background.convert("RGBA")  # Ensure the background has an alpha channel
     draw = ImageDraw.Draw(image)
 
     for feature in features:
@@ -168,7 +224,6 @@ def create_card_image(card: Dict[str, str], features: List['ImageFeature'], outp
 
     # Save the image
     image.save(output_path, "PNG")
-
 
 
 def main():
