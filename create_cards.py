@@ -172,8 +172,9 @@ def create_card_image(card: Dict[str, str], features: List['ImageFeature'], outp
     MARGIN = int(0.25 * DPI)  # Left and right margins
 
     # Generate gradient background
-    gradient_background = generate_gradient(CARD_WIDTH, CARD_HEIGHT)
-    image = gradient_background.convert("RGBA")  # Ensure the background has an alpha channel
+    # gradient_background = generate_gradient(CARD_WIDTH, CARD_HEIGHT)
+    # image = gradient_background.convert("RGBA")  # Ensure the background has an alpha channel
+    image = Image.new("RGBA", (CARD_WIDTH, CARD_HEIGHT), "white")
     draw = ImageDraw.Draw(image)
 
     for feature in features:
