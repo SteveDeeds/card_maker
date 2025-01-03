@@ -5,8 +5,7 @@ LCALLIG,40,#433650,Center,0.27,posttitle,0
 BELL,60,#273245,Left,0.4,instrument,0
 lucon,60,#273245,Right,0.5,chord,0
 BELL,50,#566246,Left,0.7,tip,0
-lucon,60,#273245,Left,0.02,number,0
-lucon,60,#273245,Left,0.08,suit,0
-lucon,60,#273245,Right,0.98,number,180
-lucon,60,#273245,Right,0.92,suit,180
+lucon,60,#273245,Left,0.09,number,0
+lucon,60,#273245,Left,0.14,suit,0
+lucon,60,#322f48,Left,0.9,notes,0
 
