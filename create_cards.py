@@ -1,6 +1,8 @@
 import csv
 from typing import List, Dict
 from PIL import Image, ImageDraw, ImageFont, ImageColor
+from textwrap import wrap
+from typing import List, Dict
 
 class ImageFeature:
     def __init__(self, font: str, font_size: int, text_color: str, 
@@ -76,11 +78,43 @@ def hex_to_rgba(hex_color: str, alpha: int = 255) -> tuple:
     # Add the alpha value for transparency
     return (rgb[0], rgb[1], rgb[2], alpha)
 
-def create_card_image(card: Dict[str, str], features: List[ImageFeature], output_path: str):
+def wrap_text(text: str, font: ImageFont.FreeTypeFont, max_width: int, draw: ImageDraw.Draw) -> List[str]:
+    """
+    Wraps the text to fit within a specified width.
+
+    Args:
+        text (str): The text to be wrapped.
+        font (ImageFont.FreeTypeFont): The font used to measure text size.
+        max_width (int): The maximum width allowed for the text.
+        draw (ImageDraw.Draw): The drawing context (not used directly here but kept for consistency).
+
+    Returns:
+        List[str]: A list of text lines wrapped to fit within max_width.
+    """
+    words = text.split()
+    wrapped_lines = []
+    current_line = []
+
+    for word in words:
+        test_line = ' '.join(current_line + [word])
+        text_bbox = draw.textbbox((0, 0), test_line, font=font)  # Measure text bbox
+        text_width = text_bbox[2] - text_bbox[0]  # Calculate the width
+        if text_width <= max_width:
+            current_line.append(word)
+        else:
+            wrapped_lines.append(' '.join(current_line))
+            current_line = [word]
+
+    if current_line:
+        wrapped_lines.append(' '.join(current_line))
+
+    return wrapped_lines
+
+def create_card_image(card: Dict[str, str], features: List['ImageFeature'], output_path: str):
     # Constants for card size and resolution
     CARD_WIDTH, CARD_HEIGHT = 750, 1050  # Poker card size at 300 DPI (2.5x3.5 inches)
     DPI = 300
-    MARGIN = int(0.1 * DPI)  # left and right margins
+    MARGIN = int(0.1 * DPI)  # Left and right margins
 
     # Create a blank white image
     image = Image.new("RGBA", (CARD_WIDTH, CARD_HEIGHT), "white")
@@ -98,45 +132,43 @@ def create_card_image(card: Dict[str, str], features: List[ImageFeature], output
         except IOError:
             font = ImageFont.load_default()
 
-        # Calculate text position
-        text_bbox = draw.textbbox((0, 0), text, font=font)
-        text_width, text_height = text_bbox[2] - text_bbox[0], text_bbox[3] - text_bbox[1]
-        justification = feature.justification.lower()
-        if justification == "center":
-            x = (CARD_WIDTH - text_width) // 2  
-        elif justification == "right":
-            x = CARD_WIDTH - text_width - MARGIN
-        else:
-            x = MARGIN  # assume left justified
+        # Determine the maximum width for the text area
+        max_width = CARD_WIDTH - 2 * MARGIN
 
-        y = int(feature.vertical_pos * CARD_HEIGHT)
+        # Wrap the text to fit the width
+        wrapped_lines = wrap_text(text, font, max_width, draw)
 
-        if int(feature.rotation) == 0:
-            draw.text((x, y), text, fill=feature.text_color, font=font)
-        else:
-            # Create an image for the text with transparent background (RGBA mode)
-            text_image = Image.new("RGBA", (text_width, text_height), (0, 0, 0, 0))  # Transparent background
-            text_draw = ImageDraw.Draw(text_image)
+        # Calculate the maximum text height (consistent line spacing)
+        max_text_height = max(
+            draw.textbbox((0, 0), line, font=font)[3] - draw.textbbox((0, 0), line, font=font)[1]
+            for line in wrapped_lines
+        )
 
-            # Draw the text in the specified color, ensuring transparency for the background
-            text_draw.text((0, 0), text, fill=hex_to_rgba(feature.text_color, 255), font=font)
+        # Calculate initial position
+        total_text_height = len(wrapped_lines) * max_text_height * 1.1  # Include spacing factor (1.1)
+        y_start = int(feature.vertical_pos * CARD_HEIGHT - total_text_height / 2)
+        y = y_start
 
-            # Ensure feature.rotation is treated as a float
-            rotation_angle = float(feature.rotation)
+        for line in wrapped_lines:
+            text_bbox = draw.textbbox((0, 0), line, font=font)
+            text_width = text_bbox[2] - text_bbox[0]
+            justification = feature.justification.lower()
+            if justification == "center":
+                x = (CARD_WIDTH - text_width) // 2
+            elif justification == "right":
+                x = CARD_WIDTH - text_width - MARGIN
+            else:
+                x = MARGIN  # Assume left justified
 
-            # Rotate the text based on feature.rotation
-            text_image = text_image.rotate(rotation_angle, expand=True)
+            # Draw the text line
+            draw.text((x, y), line, fill=feature.text_color, font=font)
 
-            # Calculate the new position for the rotated text
-            rotated_width, rotated_height = text_image.size
-            x = (CARD_WIDTH - rotated_width) // 2 if justification == "center" else x
-            y = int(feature.vertical_pos * CARD_HEIGHT) - rotated_height // 2
-
-            # Paste the rotated text onto the main image, treating white as transparent
-            image.paste(text_image, (x, y), create_transparent_mask(text_image))
+            # Increment y by the maximum line height plus spacing
+            y += max_text_height * 1.1
 
     # Save the image
     image.save(output_path, "PNG")
+
 
 
 def main():
